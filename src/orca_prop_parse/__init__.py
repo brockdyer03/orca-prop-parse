@@ -1,1 +1,1 @@
-from .prop_parse import OrcaPropParse
+from .prop_parse import OrcaPropParse, _flatten_arrays
