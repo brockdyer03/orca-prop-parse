@@ -21,6 +21,9 @@ dev = [
     "pytest>=9.0.3",
     "pytest-cov>=7.1.0",
 ]
+json-spec = [
+    "pydantic>=2.12.5",
+]
 lint = [
     "ruff>=0.15.9",
 ]

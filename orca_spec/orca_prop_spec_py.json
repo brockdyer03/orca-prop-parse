@@ -1,0 +1,3986 @@
+{
+    "Energy": {
+        "multiple_allowed": true,
+        "components": {
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "totalEnergy": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Total energy of each state"
+            },
+            "Mult": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Multiplicity of each state"
+            },
+            "Irrep": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Irreducible representation of each state"
+            },
+            "RelCorr": {
+                "type": "str",
+                "optional": true,
+                "list": false,
+                "description": "Relativistic correction (SOC and/or SSC)"
+            },
+            "NBlocks": {
+                "type": "int",
+                "optional": true,
+                "list": false,
+                "description": "Number of multiplicity blocks"
+            },
+            "NRoots": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Number of roots in each block"
+            },
+            "NTotalRoots": {
+                "type": "int",
+                "optional": true,
+                "list": false,
+                "description": "Total number of roots"
+            },
+            "Block": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Block index of each state"
+            },
+            "Root": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Root index within the block"
+            },
+            "FollowIRoot": {
+                "type": "int",
+                "optional": true,
+                "list": false,
+                "description": "Index of the followed root"
+            },
+            "AvgMult": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": "Average multiplicity of each SO-/SS-coupled state"
+            }
+        },
+        "AutoCI": {
+            "additional_components": {
+                "numOfEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfCorrEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfAlphaCorrEl": {
+                    "type": "int",
+                    "optional": true,
+                    "list": false,
+                    "description": null
+                },
+                "numOfBetaCorrEl": {
+                    "type": "int",
+                    "optional": true,
+                    "list": false,
+                    "description": null
+                },
+                "refEnergy": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Reference energy for each state"
+                },
+                "corrEnergy": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Total correlation energy for each state"
+                }
+            }
+        },
+        "CAS_DCD": {
+            "additional_components": {
+                "finalEnergy": {
+                    "type": "float",
+                    "optional": false,
+                    "list": false,
+                    "description": "Final GS or SA energy"
+                },
+                "numOfElectrons": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfActiveEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "Number of active electrons"
+                },
+                "numOfActiveOrbs": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "Number of active orbitals"
+                },
+                "numOfFCElectrons": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                }
+            }
+        },
+        "CAS_MSPT2": {
+            "additional_components": {
+                "finalEnergy": {
+                    "type": "float",
+                    "optional": false,
+                    "list": false,
+                    "description": "Final GS or SA energy"
+                },
+                "numOfElectrons": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfActiveEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "Number of active electrons"
+                },
+                "numOfActiveOrbs": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "Number of active orbitals"
+                },
+                "numOfFCElectrons": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                }
+            }
+        },
+        "CAS_PT2": {
+            "additional_components": {
+                "finalEnergy": {
+                    "type": "float",
+                    "optional": false,
+                    "list": false,
+                    "description": "Final GS or SA energy"
+                },
+                "numOfElectrons": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfActiveEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "Number of active electrons"
+                },
+                "numOfActiveOrbs": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "Number of active orbitals"
+                },
+                "numOfFCElectrons": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                }
+            }
+        },
+        "CAS_SCF": {
+            "additional_components": {
+                "finalEnergy": {
+                    "type": "float",
+                    "optional": false,
+                    "list": false,
+                    "description": "Final GS or SA energy"
+                },
+                "numOfElectrons": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfActiveEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "Number of active electrons"
+                },
+                "numOfActiveOrbs": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "Number of active orbitals"
+                },
+                "numOfFCElectrons": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                }
+            }
+        },
+        "CIS": {
+            "additional_components": {
+                "e0": {
+                    "type": "float",
+                    "optional": false,
+                    "list": false,
+                    "description": "Ground state energy"
+                },
+                "multP1": {
+                    "type": "bool",
+                    "optional": false,
+                    "list": false,
+                    "description": "Do the higher multiplicity too?"
+                },
+                "mode": {
+                    "type": "str",
+                    "optional": false,
+                    "list": false,
+                    "description": "CIS mode: CIS, RPA, TDA, TD-DFT, sTDA, sTD-DFT"
+                },
+                "dCorr": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": "(D) Correction algorithm"
+                }
+            }
+        },
+        "MDCI": {
+            "additional_components": {
+                "numOfEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfCorrEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfAlphaCorrEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "numOfBetaCorrEl": {
+                    "type": "int",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "refEnergy": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Reference Energy"
+                },
+                "corrEnergy": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Total Correlation Energy"
+                },
+                "aaCorrEn": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Alpha-Alpha Pairs Correlation Energy (No (T))"
+                },
+                "bbCorrEn": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Beta-Beta Pairs Correlation Energy (No (T))"
+                },
+                "abCorrEn": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Alpha-Beta Pairs Correlation Energy (No (T))"
+                },
+                "CorrDS": {
+                    "type": "list[float]",
+                    "optional": true,
+                    "list": false,
+                    "description": "Singlet pairs energy of double amplitudes (No (T))"
+                },
+                "CorrDT": {
+                    "type": "list[float]",
+                    "optional": true,
+                    "list": false,
+                    "description": "Triplet pairs energy of double amplitudes (No (T))"
+                },
+                "CorrSS": {
+                    "type": "list[float]",
+                    "optional": true,
+                    "list": false,
+                    "description": "Singlet pairs energy of quadratic single amplitudes (No (T))"
+                },
+                "CorrST": {
+                    "type": "list[float]",
+                    "optional": true,
+                    "list": false,
+                    "description": "Triplet pairs energy of quadratic single amplitudes (No (T))"
+                },
+                "triplesEnergy": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Triples Correction Energy"
+                }
+            }
+        },
+        "MP2": {
+            "additional_components": {
+                "refEnergy": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "Reference energy for each state"
+                },
+                "corrEnergy": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": "MP2 correlation energy for each state"
+                }
+            }
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "Dipole_Moment": {
+        "multiple_allowed": true,
+        "components": {
+            "dipoleMagnitude": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null,
+                "units": "a.u."
+            },
+            "dipoleElecContrib": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Electronic contribution"
+            },
+            "dipoleNucContrib": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Nuclear contribution"
+            },
+            "dipoleTotal": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Total"
+            },
+            "doAtomicDipole": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "atomicDipole": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": "Atomic dipoles (NAtoms * X,Y,Z)"
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        },
+        "CASPT2": {
+            "additional_components": null
+        },
+        "CAS_CUSTOM": {
+            "additional_components": null
+        }
+    },
+    "EFG_Tensor": {
+        "multiple_allowed": true,
+        "components": {
+            "numOfNucs": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Number of active nuclei"
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NUC": {
+                "type": "int",
+                "optional": false,
+                "list": true,
+                "description": "Index of the nuclei"
+            },
+            "Elems": {
+                "type": "int",
+                "optional": false,
+                "list": true,
+                "description": "Atomic number of the nuclei"
+            },
+            "Isotope": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": "Atomic mass"
+            },
+            "I": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": "Spin of the nuclei"
+            },
+            "QFAC": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": "Prefactor"
+            },
+            "V": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Raw tensor"
+            },
+            "VEigenvalues": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Eigenvalues"
+            },
+            "orientation": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Eigenvectors"
+            },
+            "VIso": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": null
+            }
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "Polarizability": {
+        "multiple_allowed": true,
+        "components": {
+            "isotropicPolar": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "rawCartesian": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null,
+                "units": "a.u"
+            },
+            "diagonalizedTensor": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "orientation": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "doAtomicPolar": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "atomicPolarIso": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": "Atomic istotropic polarizabilities"
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "Quadrupole_Moment": {
+        "multiple_allowed": true,
+        "components": {
+            "isotropicQuadMoment": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null,
+                "units": "a.u."
+            },
+            "quadElecContrib": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Electronic contribution.  Order: XX, YY, ZZ, XY, XZ, YZ"
+            },
+            "quadNucContrib": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Nuclear contribution.  Order: XX, YY, ZZ, XY, XZ, YZ"
+            },
+            "quadTotal": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Total.  Order: XX, YY, ZZ, XY, XZ, YZ"
+            },
+            "quadDiagonalized": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "The diagonalized tensor",
+                "units": "a.u."
+            },
+            "doAtomicQuad": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "atomicQuad": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": "Atomic quadrupoles (NAtoms * XX, YY, ZZ, XY, XZ, YZ)"
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "A_Tensor": {
+        "multiple_allowed": true,
+        "components": {
+            "numOfNucs": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Number of active nuclei"
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NUC": {
+                "type": "int",
+                "optional": false,
+                "list": true,
+                "description": "Index of the nuclei"
+            },
+            "Elem": {
+                "type": "int",
+                "optional": false,
+                "list": true,
+                "description": "Atomic number of the nuclei"
+            },
+            "Isotope": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": "Atomic mass"
+            },
+            "I": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": "Spin of the nuclei"
+            },
+            "PFAC": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": "Prefactor PFAC=gegNbe*bN (in MHz)"
+            },
+            "ARaw": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Raw tensor"
+            },
+            "AEigenvalues": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Eigenvalues"
+            },
+            "orientation": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Eigenvectors"
+            },
+            "AIso": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "Chemical_Shift": {
+        "multiple_allowed": true,
+        "components": {
+            "numOfNucs": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NUC": {
+                "type": "int",
+                "optional": false,
+                "list": true,
+                "description": "Index of the nuclei"
+            },
+            "Elems": {
+                "type": "int",
+                "optional": false,
+                "list": true,
+                "description": "Atomic number of the nuclei"
+            },
+            "SDSO": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Diamagnetic contribution"
+            },
+            "SPSO": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Paramagnetic contribution"
+            },
+            "STot": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Total tensor"
+            },
+            "orientation": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Eigenvectors"
+            },
+            "sTotEigen": {
+                "type": "list[float]",
+                "optional": false,
+                "list": true,
+                "description": "Eigenvalues"
+            },
+            "siso": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": null
+            },
+            "saniso": {
+                "type": "float",
+                "optional": false,
+                "list": true,
+                "description": null
+            }
+        },
+        "AUTOCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": {
+                "d_raw": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "d_eigenvalues": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "d_eigenvectors": {
+                    "type": "list[float]",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "D": {
+                    "type": "float",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                },
+                "E": {
+                    "type": "float",
+                    "optional": false,
+                    "list": false,
+                    "description": null
+                }
+            }
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "D_Tensor": {
+        "multiple_allowed": true,
+        "components": {
+            "d_raw": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "d_eigenvalues": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "d_eigenvectors": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "D": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "E": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CASSCF_2ndOrder": {
+            "additional_components": null
+        },
+        "CASSCF_2ndOrder_ES": {
+            "additional_components": null
+        },
+        "CASSCF_Heff": {
+            "additional_components": null
+        },
+        "CASSCF_Heff_ES": {
+            "additional_components": null
+        },
+        "NEVPT2_2ndOrder": {
+            "additional_components": null
+        },
+        "NEVPT2_2ndOrder_ES": {
+            "additional_components": null
+        },
+        "NEVPT2_Heff": {
+            "additional_components": null
+        },
+        "NEVPT2_Heff_ES": {
+            "additional_components": null
+        },
+        "CUSTOM_2ndOrder": {
+            "additional_components": null
+        },
+        "CUSTOM_2ndOrder_ES": {
+            "additional_components": null
+        },
+        "CUSTOM_Heff": {
+            "additional_components": null
+        },
+        "CUSTOM_Heff_ES": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "MRCI_2ndOrder": {
+            "additional_components": null
+        },
+        "MRCI_2ndOrder_ES": {
+            "additional_components": null
+        },
+        "MRCI_Heff": {
+            "additional_components": null
+        },
+        "MRCI_Heff_ES": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "G_Tensor": {
+        "multiple_allowed": true,
+        "components": {
+            "g_matrix": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "g_elec": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "The free electron g-value contribution"
+            },
+            "g_RMC": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "The reduced mass correction"
+            },
+            "g_DSO": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "g_PSO": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "g_Tot": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "g_iso": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Delta_g": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Delta_g_iso": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "orientation": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CASSCF_2ndOrder": {
+            "additional_components": null
+        },
+        "CASSCF_Heff": {
+            "additional_components": null
+        },
+        "NEVPT2_2ndOrder": {
+            "additional_components": null
+        },
+        "NEVPT2_Heff": {
+            "additional_components": null
+        },
+        "CUSTOM_2ndOrder": {
+            "additional_components": null
+        },
+        "CUSTOM_Heff": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        },
+        "CASPT2": {
+            "additional_components": null
+        }
+    },
+    "Spin_Spin_Coupling": {
+        "multiple_allowed": true,
+        "components": {
+            "numOfNucPairs": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Number of nuclei pairs to calculate"
+            },
+            "numOfNucPairsDSO": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "number of nuclear pairs to calculate DSO"
+            },
+            "numOfNucPairsPSO": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "number of nuclear pairs to calculate PSO"
+            },
+            "numOfNucPairsFC": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "number of nuclear pairs to calculate FC"
+            },
+            "numOfNucPairsSD": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "number of nuclear pairs to calculate SD"
+            },
+            "numOfNucPairsSD_FC": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "number of nuclear pairs to calculate SD/FC"
+            },
+            "pairsInfo": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": "Pairs Info: Col1->Index of A. Col2->Atom. Num. of A.  Col3->Index of B. Col4->Atom. Num. of B."
+            },
+            "pairsDistances": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "The distances of each pair"
+            },
+            "pairsTotalSSCIso": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "The Spin-Spin coupling constant for each pair"
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "Absorption_Spectrum": {
+        "multiple_allowed": true,
+        "components": {
+            "Method": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "RelCorrection": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Type of relativistic treatment in QDPT. 0->Unknow, 1->None, 2->SOC, 3->SSC, 4->SOC/SSC"
+            },
+            "DensType": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Type of density (electron/spin \u2026). 0->Unknow, 1->Electronic, 2->Spin, 3->Trans/Electronic, 4->Tran/Spin"
+            },
+            "DeriType": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Type of derivative (w.r.t. to what perturbation). 0->Unknown, 1->No Derivative, 2->Electric/Dipole, 3->Electric/Quad, 4->Magnetic/Dipole, 5->Magnetic/Quad"
+            },
+            "DensLevel": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "// Source of density: relaxed, unrelaxed, \u2026 0->Unknown, 1->Linearized, 2->Unrelaxed, 3->Relaxed"
+            },
+            "Density_name": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Representation": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": "Possible values: Unknown,  Length, Velocity"
+            },
+            "PointGroup": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "DoHigherMoments": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NTrans": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "ExcitationEnergies": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "States": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": "The initial and Final states. Col1: Initial State  Col2: Initial Irrep Col3: Final State Col4: Final Irrep"
+            },
+            "Multiplicities": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Col1: Multiplicity of the initial state  Col2: Multiplicity of the final state"
+            },
+            "Temperature": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "AutoCI_MRCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CASSCF_PT": {
+            "additional_components": null
+        },
+        "CASSCF_QDPT": {
+            "additional_components": null
+        },
+        "CASSCF_DCD": {
+            "additional_components": null
+        },
+        "CASSCF_PT_Energies": {
+            "additional_components": null
+        },
+        "CASSCF_Custom": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "LFT": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "ECD_Spectrum": {
+        "multiple_allowed": true,
+        "components": {
+            "Method": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "RelCorrection": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Type of relativistic treatment in QDPT. 0->Unknow, 1->None, 2->SOC, 3->SSC, 4->SOC/SSC"
+            },
+            "DensType": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Type of density (electron/spin \u2026). 0->Unknow, 1->Electronic, 2->Spin, 3->Trans/Electronic, 4->Tran/Spin"
+            },
+            "DeriType": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Type of derivative (w.r.t. to what perturbation). 0->Unknown, 1->No Derivative, 2->Electric/Dipole, 3->Electric/Quad, 4->Magnetic/Dipole, 5->Magnetic/Quad"
+            },
+            "DensLevel": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "// Source of density: relaxed, unrelaxed, \u2026 0->Unknown, 1->Linearized, 2->Unrelaxed, 3->Relaxed"
+            },
+            "Density_name": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Representation": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": "Possible values: Unknown,  Length, Velocity"
+            },
+            "PointGroup": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "DoHigherMoments": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NTrans": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "ExcitationEnergies": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "States": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": "The initial and Final states. Col1: Initial State  Col2: Initial Irrep Col3: Final State Col4: Final Irrep"
+            },
+            "Multiplicities": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Col1: Multiplicity of the initial state  Col2: Multiplicity of the final state"
+            },
+            "Temperature": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "AutoCI": {
+            "additional_components": null
+        },
+        "AutoCI_MRCI": {
+            "additional_components": null
+        },
+        "CASSCF": {
+            "additional_components": null
+        },
+        "CASSCF_PT": {
+            "additional_components": null
+        },
+        "CASSCF_QDPT": {
+            "additional_components": null
+        },
+        "CASSCF_DCD": {
+            "additional_components": null
+        },
+        "CASSCF_Custom": {
+            "additional_components": null
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "ICE": {
+            "additional_components": null
+        },
+        "LFT": {
+            "additional_components": null
+        },
+        "MCRPA": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "MRCI": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "ROCIS": {
+            "additional_components": null
+        },
+        "RPA": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "CIPSI_Energies": {
+        "multiple_allowed": false,
+        "components": {
+            "finalEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "numOfRoots": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "multiplicity": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "energies": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Nuclear_Gradient": {
+        "multiple_allowed": true,
+        "components": {
+            "NAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "gradNorm": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "grad": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        },
+        "CIS": {
+            "additional_components": null
+        },
+        "MDCI": {
+            "additional_components": null
+        },
+        "MP2": {
+            "additional_components": null
+        },
+        "RASCI": {
+            "additional_components": null
+        },
+        "SCF": {
+            "additional_components": null
+        }
+    },
+    "DBOC_Energy": {
+        "multiple_allowed": false,
+        "components": {
+            "DBOC_Energy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "DFT_Energy": {
+        "multiple_allowed": false,
+        "components": {
+            "nAlphaEl": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "nBetaEl": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "nTotalEl": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "finalEn": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "No Van der Waals correction"
+            },
+            "eExchange": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "eCorr": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "eXC": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "eCNL": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "eEmbed": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "BROKEN_SYMMETRY": {
+        "multiple_allowed": false,
+        "components": {
+            "enHighSpin": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "The High Spin Energy"
+            },
+            "enBrokenSym": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "The Broken Symmetry Energy"
+            },
+            "SHighSpin": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "The High Spin Spin"
+            },
+            "S2HighSpin": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "The Expectation value of S**2 for the High Spin case"
+            },
+            "S2BrokenSym": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "The Expectation value of S**2 for the Broken symmetry case"
+            }
+        }
+    },
+    "Hyperpolarizability": {
+        "multiple_allowed": true,
+        "components": {
+            "rawCartesian": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null,
+                "units": "a.u"
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Excited_States_Dynamics": {
+        "multiple_allowed": false,
+        "components": {
+            "fluorRateConstant": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Energy_Extrapolation": {
+        "multiple_allowed": false,
+        "components": {
+            "doEp1": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": "Extrapolation using only one method"
+            },
+            "doEp2": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": "Extrapolation using two different methods (same small basis Set)"
+            },
+            "doEp3": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": "Extrapolation using two different methods (use three basis Sets for the cheap method)"
+            },
+            "doGradients": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": "Extrapolate energy gradients"
+            },
+            "scfEnergies": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "scfCBS": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "scfGradients": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": "The SCF Gradients"
+            },
+            "corrEnergies": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "corrCBS": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "ccsdtEnergyX": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "totalCBS": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "cardinalNumbers": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "alphas": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "betas": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "numOfEnergies": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "How many energies we are going to use (e.g. two-point scheme)."
+            },
+            "basisName": {
+                "type": "str",
+                "optional": false,
+                "list": true,
+                "description": null
+            }
+        }
+    },
+    "gCP_Energy": {
+        "multiple_allowed": false,
+        "components": {
+            "gCP_Energy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Hessian": {
+        "multiple_allowed": false,
+        "components": {
+            "HESSIAN": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "The Hessian"
+            },
+            "MODES": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "The modes of vibrations"
+            }
+        }
+    },
+    "Calculation_Info": {
+        "multiple_allowed": false,
+        "components": {
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Charge": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NumOfAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NumOfElectrons": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NumOfBasisFuncts": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NumOfAuxCBasisFuncts": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NumOfAuxJBasisFuncts": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NumOfAuxJKBasisFuncts": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NumOfCABSBasisFuncts": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Single_Point_Data": {
+        "multiple_allowed": false,
+        "components": {
+            "FinalEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Final single point energy"
+            },
+            "Converged": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "CHELPG_Population_Analysis": {
+        "multiple_allowed": true,
+        "components": {
+            "NAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "ATNO": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "AtomicCharges": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Hirshfeld_Population_Analysis": {
+        "multiple_allowed": true,
+        "components": {
+            "NAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "ATNO": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "DENSA": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Total integrated alpha density"
+            },
+            "DENSB": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Total integrated beta density"
+            },
+            "AtomicCharges": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Spin": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Loewdin_Population_Analysis": {
+        "multiple_allowed": true,
+        "components": {
+            "NAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "ATNO": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "AtomicCharges": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Mayer_Population_Analysis": {
+        "multiple_allowed": true,
+        "components": {
+            "NAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "Total number of atoms"
+            },
+            "NBondOrdersPrint": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "The number of bond orders larger than threshold"
+            },
+            "bondThresh": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "The threshold for printing"
+            },
+            "components": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "The indices and atomic numbers of the bonding atoms"
+            },
+            "BondOrders": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": "The bond orders"
+            },
+            "ATNO": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": "Atomic number of the elements"
+            },
+            "NA": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Mulliken gross atomic population"
+            },
+            "ZA": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Total nuclear charge"
+            },
+            "QA": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Mulliken gross atomic charge"
+            },
+            "VA": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Mayer\u2019s total valence"
+            },
+            "BVA": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Mayer\u2019s bonded valence"
+            },
+            "FA": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Mayer\u2019s free valence"
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "MBIS_Population_Analysis": {
+        "multiple_allowed": true,
+        "components": {
+            "NAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "ATNO": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Thresh": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Niter": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "LargePrint": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "DENSA": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Total integrated alpha density"
+            },
+            "DENSB": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Total integrated beta density"
+            },
+            "AtomicCharges": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Spin": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NPOPVAL": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "SIGMAVAL": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "AtomicDipole": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "AtomicQuadrupole": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "AtomicOctupole": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ThirdRadialMoment": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Mulliken_Population_Analysis": {
+        "multiple_allowed": true,
+        "components": {
+            "NAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "ATNO": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "AtomicCharges": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Level": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Mult": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "State": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Irrep": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "ROCIS_Energies": {
+        "multiple_allowed": false,
+        "components": {
+            "refEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "corrEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "totalEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "numOfRoots": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Energies": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "State energies in Hartree"
+            },
+            "Multiplicities": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "SOC_Energy_Correction": {
+        "multiple_allowed": false,
+        "components": {
+            "total_SOC_energy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "total_non_SOC_energy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "nuclear_energy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "SOC_correction": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "STEOM": {
+        "multiple_allowed": false,
+        "components": {
+            "S2": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "<S**2>"
+            },
+            "PercentageActiveCharacter": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Method": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "excitationEnergies": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Total energy of each state"
+            },
+            "Mult": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Multiplicity of each state"
+            },
+            "Irrep": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Irreducible representation of each state"
+            },
+            "RelCorr": {
+                "type": "str",
+                "optional": true,
+                "list": false,
+                "description": "Relativistic correction (SOC and/or SSC)"
+            },
+            "NBlocks": {
+                "type": "int",
+                "optional": true,
+                "list": false,
+                "description": "Number of multiplicity blocks"
+            },
+            "NRoots": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Number of roots in each block"
+            },
+            "NTotalRoots": {
+                "type": "int",
+                "optional": true,
+                "list": false,
+                "description": "Total number of roots"
+            },
+            "Block": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Block index of each state"
+            },
+            "Root": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Root index within the block"
+            },
+            "FollowIRoot": {
+                "type": "int",
+                "optional": true,
+                "list": false,
+                "description": "Index of the followed root"
+            },
+            "AvgMult": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": "Average multiplicity of each SO-/SS-coupled state"
+            }
+        }
+    },
+    "THERMOCHEMISTRY_Energies": {
+        "multiple_allowed": true,
+        "components": {
+            "temperature": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "pressure": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "totalMass": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "spinDegeneracy": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "elEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "transEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "rotEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "vibEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "numOfFreqs": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "freqScalingFactor": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "FREQ": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": null,
+                "units": "cm^-1"
+            },
+            "zpe": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "innerEnergyU": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "enthalpyH": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "qEl": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "qRot": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "qVib": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "qTrans": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "entropyS": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "freeEnergyG": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "isLinear": {
+                "type": "bool",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "VdW_Correction": {
+        "multiple_allowed": false,
+        "components": {
+            "vdW": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "vdW_atomic": {
+                "type": "list[float]",
+                "optional": true,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Calculation_Status": {
+        "multiple_allowed": false,
+        "components": {
+            "version": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "progName": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Status": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "MDCI_EOM_Energies": {
+        "multiple_allowed": true,
+        "components": {
+            "groundRefEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Ground State Reference Energy"
+            },
+            "groundCorrEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Ground State Correlation Energy"
+            },
+            "groundTotalEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Ground State Total MDCI Energy"
+            }
+        }
+    },
+    "MDCI_LED": {
+        "multiple_allowed": false,
+        "components": {
+            "numOfFragments": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": "The number of fragments"
+            },
+            "sumNonDisStrong": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Sum of non dispersive correlation strong pairs"
+            },
+            "sumNonDisWeak": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": "Sum of non dispersive correlation weak pairs"
+            },
+            "electrostRef": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Electrostatics reference"
+            },
+            "exchangeRef": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Exchange reference"
+            },
+            "dispContr": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Strong pair dispersion contribution"
+            },
+            "dispWeak": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Weak pair dispersion contribution"
+            },
+            "refInt": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Interaction reference"
+            },
+            "corrInt": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Interaction correlation"
+            },
+            "totInt": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Interaction total"
+            }
+        }
+    },
+    "Natural_Orbitals": {
+        "multiple_allowed": false,
+        "components": {
+            "NEL": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NSOMO": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NDOMO": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NVMO": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NNatoOrbs": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "OccUno": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Occupation  of natural orbitals"
+            },
+            "OccUnso": {
+                "type": "list[float]",
+                "optional": false,
+                "list": false,
+                "description": "Occupation of spin natural orbitals"
+            }
+        }
+    },
+    "Calculation_Timings": {
+        "multiple_allowed": false,
+        "components": {
+            "GTOINT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "STOINT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SCF": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SCFGRAD": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "GSTEP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "PLOT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MOM": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MP2": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "CPSCF": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "LOC": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "CIS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MRCI": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "REL": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SOC": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "EPRNMR": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "CASSCF": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MDCI": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "CHELPG": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ROCIS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MRCC": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "FCI": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MD": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "FREQ": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "FREQ_NUM": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "COMPOUND": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "CIPSI": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "AUTOCI": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ESD": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "DLPNOCC": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MCRPA": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "NEB": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "CONFSC": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ANMR": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MM": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MMGRAD": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "XTB": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "XTBGRAD": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "LFT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "EXT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ONIOM_S": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ONIOM_M": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ONIOM_L": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "PROPINT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "RESPONSE": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "PROP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "CASRESP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "MP2RESP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "COSMORS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "AUTOCIRESP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "GOAT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "CISRESP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "EDA": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SUM": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "SCF_Timings": {
+        "multiple_allowed": false,
+        "components": {
+            "TOTAL": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "PREP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "GUESS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "FOCK": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "DENS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "DIAG": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ETOT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "POP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "TRAFO": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ORTHO": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "DIIS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SOSCF": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "NR": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "J": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "X": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "XC": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "GRID": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "FSYMMETR": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "PSYMMETR": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "FOCKSTART": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SOLV": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SOLV_INIT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SOLV_FINAL": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_PREP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_PRESCREEN": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_BF": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_DENS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_DENSIO": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_FUNC": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_POT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_POTIO": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "INT_SUM": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "SPLITRIJ": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "COSX": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "COSX1C": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "RIJK": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "STABANA": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "DFET": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ADFT_GUESS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ADFT_JDENS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ADFT_JMAT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ADFT_XDENS": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ADFT_XMAT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ADFT_TMAT": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ADFT_EQNSOLV": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ECRISM": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ECRISM_QESP": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ECRISM_TOOL": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "ECRISM_FOCK": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            },
+            "FROZCORE": {
+                "type": "float",
+                "optional": true,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Solvation_Details": {
+        "multiple_allowed": false,
+        "components": {
+            "Solvent": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Epsilon": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Refrac": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "RSolv": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "SurfaceType": {
+                "type": "str",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "CPCMDielEnergy": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NPoints": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "SurfaceArea": {
+                "type": "float",
+                "optional": false,
+                "list": false,
+                "description": null
+            }
+        }
+    },
+    "Geometry": {
+        "multiple_allowed": false,
+        "components": {
+            "NAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NCorelessECP": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "NGhostAtoms": {
+                "type": "int",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "Coordinates": {
+                "type": "list[str, float, float, float]",
+                "optional": false,
+                "list": false,
+                "description": null,
+                "units": "Bohr"
+            },
+            "ATNO": {
+                "type": "list[int]",
+                "optional": false,
+                "list": false,
+                "description": null
+            },
+            "coreless_ECP": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Non-zero for cECPs"
+            },
+            "ghostAtoms": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Non-zero for ghost atoms"
+            },
+            "fragments": {
+                "type": "list[int]",
+                "optional": true,
+                "list": false,
+                "description": "Fragment ID"
+            }
+        }
+    }
+}

@@ -14,17 +14,30 @@ from bs4 import BeautifulSoup
 file = Path("9.4. Property File - ORCA 6.1 Manual.html").read_text()
 soup = BeautifulSoup(file, features="html.parser")
 
+# orca_dtypes = {
+#     "D": "Double",
+#     "C": "Complex",
+#     "S": "String",
+#     "I": "Integer",
+#     "B": "Boolean",
+#     "AD": "ArrayOfDoubles",
+#     "AC": "ArrayOfComplex",
+#     "AI": "ArrayOfIntegers",
+#     "AB": "ArrayOfBooleans",
+#     "CC": "Coordinates",
+# }
+
 orca_dtypes = {
-    "D": "Double",
-    "C": "Complex",
-    "S": "String",
-    "I": "Integer",
-    "B": "Boolean",
-    "AD": "ArrayOfDoubles",
-    "AC": "ArrayOfComplex",
-    "AI": "ArrayOfIntegers",
-    "AB": "ArrayOfBooleans",
-    "CC": "Coordinates",
+    "D": "float",
+    "C": "complex",
+    "S": "str",
+    "I": "int",
+    "B": "bool",
+    "AD": "list[float]",
+    "AC": "list[complex]",
+    "AI": "list[int]",
+    "AB": "list[bool]",
+    "CC": "list[str, float, float, float]",
 }
 
 table_data = [[cell.text for cell in row("td")] for row in soup("tr")]
@@ -44,6 +57,7 @@ for item in table_data[1:]:
         "type": comp_type,
         "optional": item[2].strip().lower() == "y",
         "list": item[3].strip().lower() == "y",
+        "description": item[4] if item[4] != "" else None,
     }
 
     if item[5] != "":
@@ -104,8 +118,8 @@ for parent, child in tiered_dict.items():
         if tiered_dict[parent][item]["multiple_allowed"] != child["multiple_allowed"]:
             final_dict[parent][item]["multiple_allowed"] = tiered_dict[parent][item]["multiple_allowed"]
 
-Path("orca_prop_spec.json").write_text(json.dumps(final_dict, indent=4))
-print("nested_prop_map = {")
-for key, val in nested_prop_map.items():
-    print(f"    {key}: {val}")
-print("}")
+Path("orca_prop_spec_py.json").write_text(json.dumps(final_dict, indent=4))
+#print("nested_prop_map = {")
+#for key, val in nested_prop_map.items():
+#    print(f"    {key}: {val}")
+#print("}")
