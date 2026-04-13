@@ -1,3 +1,4 @@
+from pathlib import Path
 from warnings import warn
 from io import StringIO
 from typing import Any
@@ -57,6 +58,10 @@ class OrcaPropParse:
         num_geoms = max(map(int, re.findall(r"&GeometryIndex ([0-9]+)", prop_str)))
         prop_io = StringIO(prop_str)
         return cls._parse_props(prop_io, num_geoms)
+
+    @classmethod
+    def load(cls, prop_file: Path) -> dict[str, Any]:
+        return cls.loads(prop_file.read_text())
 
     @classmethod
     def _parse_prop(cls, prop_io: StringIO) -> tuple[dict[str, Any], int]:
@@ -181,3 +186,35 @@ def _flatten_arrays(data: dict) -> dict:
         return new
     else:
         return data
+
+
+def prop_to_json(file: Path, output: Path | None = None) -> None:
+    """Parse ``file.property.txt`` and write to ``file.property.json``."""
+    prop_dict = OrcaPropParse.load(file)
+    prop_dict = _flatten_arrays(prop_dict)
+    prop_str = (
+        json.dumps(prop_dict, indent=4).replace('"[', "[").replace(']"', "]")
+    )
+    prop_str = prop_str.replace(r"\"", '"')
+
+    if output is not None:
+        output.write_text(prop_str, encoding="utf-8", newline="\n")
+    else:
+        output = file.parent / file.name.replace(".txt", ".json")
+        output.write_text(prop_str, encoding="utf-8", newline="\n")
+
+
+def prop_to_toml(file: Path, output: Path | None = None) -> None:
+    """Parse ``file.property.txt`` and write to ``file.property.toml``."""
+    prop_dict = OrcaPropParse.load(file)
+    prop_dict = _flatten_arrays(prop_dict)
+    prop_str = (
+        rtoml.dumps(prop_dict, pretty=True).replace("'[", "[").replace("]'", "]")
+    )
+    prop_str = prop_str.replace("'", '"')
+
+    if output is not None:
+        output.write_text(prop_str, encoding="utf-8", newline="\n")
+    else:
+        output = file.parent / file.name.replace(".txt", ".toml")
+        output.write_text(prop_str, encoding="utf-8", newline="\n")
