@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 
 
-class Natural_Orbitals_Base(BaseModel):
+class Natural_Orbitals(BaseModel):
 
     NEL:       int
     NSOMO:     int

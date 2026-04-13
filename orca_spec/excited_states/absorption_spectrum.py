@@ -97,22 +97,22 @@ class SCF_Absorption_Spectrum(Absorption_Spectrum_Base):
 
 class Absorption_Spectrum(BaseModel):
 
-    AutoCI:             AutoCI_Absorption_Spectrum
-    AutoCI_MRCI:        AutoCI_MRCI_Absorption_Spectrum
-    CASSCF:             CASSCF_Absorption_Spectrum
-    CASSCF_PT:          CASSCF_PT_Absorption_Spectrum
-    CASSCF_QDPT:        CASSCF_QDPT_Absorption_Spectrum
-    CASSCF_DCD:         CASSCF_DCD_Absorption_Spectrum
-    CASSCF_PT_Energies: CASSCF_PT_Energies_Absorption_Spectrum
-    CASSCF_Custom:      CASSCF_Custom_Absorption_Spectrum
-    CIS:                CIS_Absorption_Spectrum
-    ICE:                ICE_Absorption_Spectrum
-    LFT:                LFT_Absorption_Spectrum
-    MCRPA:              MCRPA_Absorption_Spectrum
-    MDCI:               MDCI_Absorption_Spectrum
-    MP2:                MP2_Absorption_Spectrum
-    MRCI:               MRCI_Absorption_Spectrum
-    RASCI:              RASCI_Absorption_Spectrum
-    ROCIS:              ROCIS_Absorption_Spectrum
-    RPA:                RPA_Absorption_Spectrum
-    SCF:                SCF_Absorption_Spectrum
+    AutoCI:             AutoCI_Absorption_Spectrum | None
+    AutoCI_MRCI:        AutoCI_MRCI_Absorption_Spectrum | None
+    CASSCF:             CASSCF_Absorption_Spectrum | None
+    CASSCF_PT:          CASSCF_PT_Absorption_Spectrum | None
+    CASSCF_QDPT:        CASSCF_QDPT_Absorption_Spectrum | None
+    CASSCF_DCD:         CASSCF_DCD_Absorption_Spectrum | None
+    CASSCF_PT_Energies: CASSCF_PT_Energies_Absorption_Spectrum | None
+    CASSCF_Custom:      CASSCF_Custom_Absorption_Spectrum | None
+    CIS:                CIS_Absorption_Spectrum | None
+    ICE:                ICE_Absorption_Spectrum | None
+    LFT:                LFT_Absorption_Spectrum | None
+    MCRPA:              MCRPA_Absorption_Spectrum | None
+    MDCI:               MDCI_Absorption_Spectrum | None
+    MP2:                MP2_Absorption_Spectrum | None
+    MRCI:               MRCI_Absorption_Spectrum | None
+    RASCI:              RASCI_Absorption_Spectrum | None
+    ROCIS:              ROCIS_Absorption_Spectrum | None
+    RPA:                RPA_Absorption_Spectrum | None
+    SCF:                SCF_Absorption_Spectrum | None

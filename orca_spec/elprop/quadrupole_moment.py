@@ -67,15 +67,15 @@ class SCF_Quadrupole_Moment(Quadrupole_Moment_Base):
 
 class Quadrupole_Moment(BaseModel):
 
-    AutoCI: AutoCI_Quadrupole_Moment
-    CASSCF: CASSCF_Quadrupole_Moment
-    CIS:    CIS_Quadrupole_Moment
-    ICE:    ICE_Quadrupole_Moment
-    MCRPA:  MCRPA_Quadrupole_Moment
-    MDCI:   MDCI_Quadrupole_Moment
-    MP2:    MP2_Quadrupole_Moment
-    MRCI:   MRCI_Quadrupole_Moment
-    RASCI:  RASCI_Quadrupole_Moment
-    ROCIS:  ROCIS_Quadrupole_Moment
-    RPA:    RPA_Quadrupole_Moment
-    SCF:    SCF_Quadrupole_Moment
+    AutoCI: AutoCI_Quadrupole_Moment | None
+    CASSCF: CASSCF_Quadrupole_Moment | None
+    CIS:    CIS_Quadrupole_Moment | None
+    ICE:    ICE_Quadrupole_Moment | None
+    MCRPA:  MCRPA_Quadrupole_Moment | None
+    MDCI:   MDCI_Quadrupole_Moment | None
+    MP2:    MP2_Quadrupole_Moment | None
+    MRCI:   MRCI_Quadrupole_Moment | None
+    RASCI:  RASCI_Quadrupole_Moment | None
+    ROCIS:  ROCIS_Quadrupole_Moment | None
+    RPA:    RPA_Quadrupole_Moment | None
+    SCF:    SCF_Quadrupole_Moment | None

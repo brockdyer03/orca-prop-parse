@@ -65,15 +65,16 @@ class SCF_Polarizability(Polarizability_Base):
 
 
 class Polarizability(BaseModel):
-    AutoCI:        AutoCI_Polarizability
-    CASSCF:        CASSCF_Polarizability
-    CIS:           CIS_Polarizability
-    ICE:           ICE_Polarizability
-    MCRPA:         MCRPA_Polarizability
-    MDCI:          MDCI_Polarizability
-    MP2:           MP2_Polarizability
-    MRCI:          MRCI_Polarizability
-    RASCI:         RASCI_Polarizability
-    ROCIS:         ROCIS_Polarizability
-    RPA:           RPA_Polarizability
-    SCF:           SCF_Polarizability
+
+    AutoCI:        AutoCI_Polarizability | None
+    CASSCF:        CASSCF_Polarizability | None
+    CIS:           CIS_Polarizability | None
+    ICE:           ICE_Polarizability | None
+    MCRPA:         MCRPA_Polarizability | None
+    MDCI:          MDCI_Polarizability | None
+    MP2:           MP2_Polarizability | None
+    MRCI:          MRCI_Polarizability | None
+    RASCI:         RASCI_Polarizability | None
+    ROCIS:         ROCIS_Polarizability | None
+    RPA:           RPA_Polarizability | None
+    SCF:           SCF_Polarizability | None

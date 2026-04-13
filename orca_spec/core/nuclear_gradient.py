@@ -35,8 +35,8 @@ class SCF_Nuclear_Gradient(Nuclear_Gradient_Base):
 
 class Nuclear_Gradient(BaseModel):
 
-    CIS:   CIS_Nuclear_Gradient
-    MDCI:  MDCI_Nuclear_Gradient
-    MP2:   MP2_Nuclear_Gradient
-    RASCI: RASCI_Nuclear_Gradient
-    SCF:   SCF_Nuclear_Gradient
+    CIS:   CIS_Nuclear_Gradient | None
+    MDCI:  MDCI_Nuclear_Gradient | None
+    MP2:   MP2_Nuclear_Gradient | None
+    RASCI: RASCI_Nuclear_Gradient | None
+    SCF:   SCF_Nuclear_Gradient | None

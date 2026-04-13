@@ -75,15 +75,15 @@ class SCF_Chemical_Shift(Chemical_Shift_Base):
 
 class Chemical_Shift(BaseModel):
 
-    AUTOCI: AUTOCI_Chemical_Shift
-    CASSCF: CASSCF_Chemical_Shift
-    CIS:    CIS_Chemical_Shift
-    ICE:    ICE_Chemical_Shift
-    MCRPA:  MCRPA_Chemical_Shift
-    MDCI:   MDCI_Chemical_Shift
-    MP2:    MP2_Chemical_Shift
-    MRCI:   MRCI_Chemical_Shift
-    RASCI:  RASCI_Chemical_Shift
-    ROCIS:  ROCIS_Chemical_Shift
-    RPA:    RPA_Chemical_Shift
-    SCF:    SCF_Chemical_Shift
+    AUTOCI: AUTOCI_Chemical_Shift | None
+    CASSCF: CASSCF_Chemical_Shift | None
+    CIS:    CIS_Chemical_Shift | None
+    ICE:    ICE_Chemical_Shift | None
+    MCRPA:  MCRPA_Chemical_Shift | None
+    MDCI:   MDCI_Chemical_Shift | None
+    MP2:    MP2_Chemical_Shift | None
+    MRCI:   MRCI_Chemical_Shift | None
+    RASCI:  RASCI_Chemical_Shift | None
+    ROCIS:  ROCIS_Chemical_Shift | None
+    RPA:    RPA_Chemical_Shift | None
+    SCF:    SCF_Chemical_Shift | None

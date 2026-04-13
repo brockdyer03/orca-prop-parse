@@ -69,15 +69,15 @@ class SCF_Spin_Spin_Coupling(Spin_Spin_Coupling_Base):
 
 class Spin_Spin_Coupling(BaseModel):
 
-    AutoCI:        AutoCI_Spin_Spin_Coupling
-    CASSCF:        CASSCF_Spin_Spin_Coupling
-    CIS:           CIS_Spin_Spin_Coupling
-    ICE:           ICE_Spin_Spin_Coupling
-    MCRPA:         MCRPA_Spin_Spin_Coupling
-    MDCI:          MDCI_Spin_Spin_Coupling
-    MP2:           MP2_Spin_Spin_Coupling
-    MRCI:          MRCI_Spin_Spin_Coupling
-    RASCI:         RASCI_Spin_Spin_Coupling
-    ROCIS:         ROCIS_Spin_Spin_Coupling
-    RPA:           RPA_Spin_Spin_Coupling
-    SCF:           SCF_Spin_Spin_Coupling
+    AutoCI: AutoCI_Spin_Spin_Coupling | None
+    CASSCF: CASSCF_Spin_Spin_Coupling | None
+    CIS:    CIS_Spin_Spin_Coupling | None
+    ICE:    ICE_Spin_Spin_Coupling | None
+    MCRPA:  MCRPA_Spin_Spin_Coupling | None
+    MDCI:   MDCI_Spin_Spin_Coupling | None
+    MP2:    MP2_Spin_Spin_Coupling | None
+    MRCI:   MRCI_Spin_Spin_Coupling | None
+    RASCI:  RASCI_Spin_Spin_Coupling | None
+    ROCIS:  ROCIS_Spin_Spin_Coupling | None
+    RPA:    RPA_Spin_Spin_Coupling | None
+    SCF:    SCF_Spin_Spin_Coupling | None

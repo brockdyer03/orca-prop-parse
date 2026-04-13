@@ -74,17 +74,17 @@ class CAS_CUSTOM_Dipole_Moment(Dipole_Moment_Base):
 
 class DipoleMoment(BaseModel):
 
-    AutoCI:     AutoCI_Dipole_Moment
-    CASSCF:     CASSCF_Dipole_Moment
-    CIS:        CIS_Dipole_Moment
-    ICE:        ICE_Dipole_Moment
-    MCRPA:      MCRPA_Dipole_Moment
-    MDCI:       MDCI_Dipole_Moment
-    MP2:        MP2_Dipole_Moment
-    MRCI:       MRCI_Dipole_Moment
-    RASCI:      RASCI_Dipole_Moment
-    ROCIS:      ROCIS_Dipole_Moment
-    RPA:        RPA_Dipole_Moment
-    SCF:        SCF_Dipole_Moment
-    CASPT2:     CASPT2_Dipole_Moment
-    CAS_CUSTOM: CAS_CUSTOM_Dipole_Moment
+    AutoCI:     AutoCI_Dipole_Moment | None
+    CASSCF:     CASSCF_Dipole_Moment | None
+    CIS:        CIS_Dipole_Moment | None
+    ICE:        ICE_Dipole_Moment | None
+    MCRPA:      MCRPA_Dipole_Moment | None
+    MDCI:       MDCI_Dipole_Moment | None
+    MP2:        MP2_Dipole_Moment | None
+    MRCI:       MRCI_Dipole_Moment | None
+    RASCI:      RASCI_Dipole_Moment | None
+    ROCIS:      ROCIS_Dipole_Moment | None
+    RPA:        RPA_Dipole_Moment | None
+    SCF:        SCF_Dipole_Moment | None
+    CASPT2:     CASPT2_Dipole_Moment | None
+    CAS_CUSTOM: CAS_CUSTOM_Dipole_Moment | None

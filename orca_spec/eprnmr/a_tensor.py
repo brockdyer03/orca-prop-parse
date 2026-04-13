@@ -70,15 +70,15 @@ class SCF_A_Tensor(A_Tensor_Base):
 
 class A_Tensor(BaseModel):
 
-    AutoCI:        AutoCI_A_Tensor
-    CASSCF:        CASSCF_A_Tensor
-    CIS:           CIS_A_Tensor
-    ICE:           ICE_A_Tensor
-    MCRPA:         MCRPA_A_Tensor
-    MDCI:          MDCI_A_Tensor
-    MP2:           MP2_A_Tensor
-    MRCI:          MRCI_A_Tensor
-    RASCI:         RASCI_A_Tensor
-    ROCIS:         ROCIS_A_Tensor
-    RPA:           RPA_A_Tensor
-    SCF:           SCF_A_Tensor
+    AutoCI:        AutoCI_A_Tensor | None
+    CASSCF:        CASSCF_A_Tensor | None
+    CIS:           CIS_A_Tensor | None
+    ICE:           ICE_A_Tensor | None
+    MCRPA:         MCRPA_A_Tensor | None
+    MDCI:          MDCI_A_Tensor | None
+    MP2:           MP2_A_Tensor | None
+    MRCI:          MRCI_A_Tensor | None
+    RASCI:         RASCI_A_Tensor | None
+    ROCIS:         ROCIS_A_Tensor | None
+    RPA:           RPA_A_Tensor | None
+    SCF:           SCF_A_Tensor | None

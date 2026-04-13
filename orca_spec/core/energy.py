@@ -96,12 +96,12 @@ class MP2_Energy(Energy_Base):
 
 class Energy(BaseModel):
 
-    AutoCI:     AutoCI_Energy
-    CAS_DCD:    CAS_DCD_Energy
-    CAS_MSPT2:  CAS_MSPT2_Energy
-    CAS_PT2:    CAS_PT2_Energy
-    CAS_SCF:    CAS_SCF_Energy
-    CIS:        CIS_Energy
-    MDCI:       MDCI_Energy
-    MP2:        MP2_Energy
-    SCF:        Energy_Base
+    AutoCI:     AutoCI_Energy | None
+    CAS_DCD:    CAS_DCD_Energy | None
+    CAS_MSPT2:  CAS_MSPT2_Energy | None
+    CAS_PT2:    CAS_PT2_Energy | None
+    CAS_SCF:    CAS_SCF_Energy | None
+    CIS:        CIS_Energy | None
+    MDCI:       MDCI_Energy | None
+    MP2:        MP2_Energy | None
+    SCF:        Energy_Base | None

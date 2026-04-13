@@ -129,31 +129,31 @@ class SCF_D_Tensor(D_Tensor_Base):
 
 class D_Tensor(BaseModel):
 
-    AutoCI:             AutoCI_D_Tensor
-    CASSCF:             CASSCF_D_Tensor
-    CASSCF_2ndOrder:    CASSCF_2ndOrder_D_Tensor
-    CASSCF_2ndOrder_ES: CASSCF_2ndOrder_ES_D_Tensor
-    CASSCF_Heff:        CASSCF_Heff_D_Tensor
-    CASSCF_Heff_ES:     CASSCF_Heff_ES_D_Tensor
-    NEVPT2_2ndOrder:    NEVPT2_2ndOrder_D_Tensor
-    NEVPT2_2ndOrder_ES: NEVPT2_2ndOrder_ES_D_Tensor
-    NEVPT2_Heff:        NEVPT2_Heff_D_Tensor
-    NEVPT2_Heff_ES:     NEVPT2_Heff_ES_D_Tensor
-    CUSTOM_2ndOrder:    CUSTOM_2ndOrder_D_Tensor
-    CUSTOM_2ndOrder_ES: CUSTOM_2ndOrder_ES_D_Tensor
-    CUSTOM_Heff:        CUSTOM_Heff_D_Tensor
-    CUSTOM_Heff_ES:     CUSTOM_Heff_ES_D_Tensor
-    CIS:                CIS_D_Tensor
-    ICE:                ICE_D_Tensor
-    MCRPA:              MCRPA_D_Tensor
-    MDCI:               MDCI_D_Tensor
-    MP2:                MP2_D_Tensor
-    MRCI:               MRCI_D_Tensor
-    MRCI_2ndOrder:      MRCI_2ndOrder_D_Tensor
-    MRCI_2ndOrder_ES:   MRCI_2ndOrder_ES_D_Tensor
-    MRCI_Heff:          MRCI_Heff_D_Tensor
-    MRCI_Heff_ES:       MRCI_Heff_ES_D_Tensor
-    RASCI:              RASCI_D_Tensor
-    ROCIS:              ROCIS_D_Tensor
-    RPA:                RPA_D_Tensor
-    SCF:                SCF_D_Tensor
+    AutoCI:             AutoCI_D_Tensor | None
+    CASSCF:             CASSCF_D_Tensor | None
+    CASSCF_2ndOrder:    CASSCF_2ndOrder_D_Tensor | None
+    CASSCF_2ndOrder_ES: CASSCF_2ndOrder_ES_D_Tensor | None
+    CASSCF_Heff:        CASSCF_Heff_D_Tensor | None
+    CASSCF_Heff_ES:     CASSCF_Heff_ES_D_Tensor | None
+    NEVPT2_2ndOrder:    NEVPT2_2ndOrder_D_Tensor | None
+    NEVPT2_2ndOrder_ES: NEVPT2_2ndOrder_ES_D_Tensor | None
+    NEVPT2_Heff:        NEVPT2_Heff_D_Tensor | None
+    NEVPT2_Heff_ES:     NEVPT2_Heff_ES_D_Tensor | None
+    CUSTOM_2ndOrder:    CUSTOM_2ndOrder_D_Tensor | None
+    CUSTOM_2ndOrder_ES: CUSTOM_2ndOrder_ES_D_Tensor | None
+    CUSTOM_Heff:        CUSTOM_Heff_D_Tensor | None
+    CUSTOM_Heff_ES:     CUSTOM_Heff_ES_D_Tensor | None
+    CIS:                CIS_D_Tensor | None
+    ICE:                ICE_D_Tensor | None
+    MCRPA:              MCRPA_D_Tensor | None
+    MDCI:               MDCI_D_Tensor | None
+    MP2:                MP2_D_Tensor | None
+    MRCI:               MRCI_D_Tensor | None
+    MRCI_2ndOrder:      MRCI_2ndOrder_D_Tensor | None
+    MRCI_2ndOrder_ES:   MRCI_2ndOrder_ES_D_Tensor | None
+    MRCI_Heff:          MRCI_Heff_D_Tensor | None
+    MRCI_Heff_ES:       MRCI_Heff_ES_D_Tensor | None
+    RASCI:              RASCI_D_Tensor | None
+    ROCIS:              ROCIS_D_Tensor | None
+    RPA:                RPA_D_Tensor | None
+    SCF:                SCF_D_Tensor | None

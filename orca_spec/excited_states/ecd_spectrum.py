@@ -93,21 +93,21 @@ class SCF_ECD_Spectrum(ECD_Spectrum_Base):
 
 class ECD_Spectrum(BaseModel):
 
-    AutoCI:        AutoCI_ECD_Spectrum
-    AutoCI_MRCI:   AutoCI_MRCI_ECD_Spectrum
-    CASSCF:        CASSCF_ECD_Spectrum
-    CASSCF_PT:     CASSCF_PT_ECD_Spectrum
-    CASSCF_QDPT:   CASSCF_QDPT_ECD_Spectrum
-    CASSCF_DCD:    CASSCF_DCD_ECD_Spectrum
-    CASSCF_Custom: CASSCF_Custom_ECD_Spectrum
-    CIS:           CIS_ECD_Spectrum
-    ICE:           ICE_ECD_Spectrum
-    LFT:           LFT_ECD_Spectrum
-    MCRPA:         MCRPA_ECD_Spectrum
-    MDCI:          MDCI_ECD_Spectrum
-    MP2:           MP2_ECD_Spectrum
-    MRCI:          MRCI_ECD_Spectrum
-    RASCI:         RASCI_ECD_Spectrum
-    ROCIS:         ROCIS_ECD_Spectrum
-    RPA:           RPA_ECD_Spectrum
-    SCF:           SCF_ECD_Spectrum
+    AutoCI:        AutoCI_ECD_Spectrum | None
+    AutoCI_MRCI:   AutoCI_MRCI_ECD_Spectrum | None
+    CASSCF:        CASSCF_ECD_Spectrum | None
+    CASSCF_PT:     CASSCF_PT_ECD_Spectrum | None
+    CASSCF_QDPT:   CASSCF_QDPT_ECD_Spectrum | None
+    CASSCF_DCD:    CASSCF_DCD_ECD_Spectrum | None
+    CASSCF_Custom: CASSCF_Custom_ECD_Spectrum | None
+    CIS:           CIS_ECD_Spectrum | None
+    ICE:           ICE_ECD_Spectrum | None
+    LFT:           LFT_ECD_Spectrum | None
+    MCRPA:         MCRPA_ECD_Spectrum | None
+    MDCI:          MDCI_ECD_Spectrum | None
+    MP2:           MP2_ECD_Spectrum | None
+    MRCI:          MRCI_ECD_Spectrum | None
+    RASCI:         RASCI_ECD_Spectrum | None
+    ROCIS:         ROCIS_ECD_Spectrum | None
+    RPA:           RPA_ECD_Spectrum | None
+    SCF:           SCF_ECD_Spectrum | None

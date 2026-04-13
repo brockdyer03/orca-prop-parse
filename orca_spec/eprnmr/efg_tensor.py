@@ -66,14 +66,14 @@ class SCF_EFG_Tensor(EFG_Tensor_Base):
 
 class EFG_Tensor(BaseModel):
 
-    CASSCF:        CASSCF_EFG_Tensor
-    CIS:           CIS_EFG_Tensor
-    ICE:           ICE_EFG_Tensor
-    MCRPA:         MCRPA_EFG_Tensor
-    MDCI:          MDCI_EFG_Tensor
-    MP2:           MP2_EFG_Tensor
-    MRCI:          MRCI_EFG_Tensor
-    RASCI:         RASCI_EFG_Tensor
-    ROCIS:         ROCIS_EFG_Tensor
-    RPA:           RPA_EFG_Tensor
-    SCF:           SCF_EFG_Tensor
+    CASSCF:        CASSCF_EFG_Tensor | None
+    CIS:           CIS_EFG_Tensor | None
+    ICE:           ICE_EFG_Tensor | None
+    MCRPA:         MCRPA_EFG_Tensor | None
+    MDCI:          MDCI_EFG_Tensor | None
+    MP2:           MP2_EFG_Tensor | None
+    MRCI:          MRCI_EFG_Tensor | None
+    RASCI:         RASCI_EFG_Tensor | None
+    ROCIS:         ROCIS_EFG_Tensor | None
+    RPA:           RPA_EFG_Tensor | None
+    SCF:           SCF_EFG_Tensor | None
