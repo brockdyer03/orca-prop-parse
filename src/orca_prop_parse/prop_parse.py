@@ -25,6 +25,16 @@ PROP_GROUPS = {
     "Nuc_Gradient":        "Nuclear_Gradient",
 }
 GROUP_PATTERN = re.compile("_?("+"|".join(PROP_GROUPS.keys())+")_?")
+
+POPULATION_ANALYSES = (
+    "CHELPG",
+    "Hirshfeld",
+    "Loewdin",
+    "Mayer",
+    "MBIS",
+    "Mulliken",
+)
+POP_PATTERN = re.compile("_?("+"|".join(POPULATION_ANALYSES)+")_?")
 class OrcaPropParse:
     """Parsing and conversion for ORCA's ``.property.txt`` files"""
 
@@ -39,11 +49,27 @@ class OrcaPropParse:
                 prop = line[1:].strip()
                 prop_info, geom_number = cls._parse_prop(prop_io)
                 prop_dict[prop] = prop_info
+            elif line.endswith("_Population_Analysis\n"):
+                prop_info, geom_number = cls._parse_prop(prop_io)
+                del prop_info["Method"]
+                prop = line[1:].strip().replace("_Population_Analysis", "")
+                analysis_type = re.search(POP_PATTERN, prop).group(1)
+                method = prop.replace(analysis_type, "").rstrip("_")
+
+                if "Population_Analysis" not in prop_dict["Geometries"][geom_number]:
+                    prop_dict["Geometries"][geom_number]["Population_Analysis"] = {}
+
+                prop_dict["Geometries"][geom_number]["Population_Analysis"][analysis_type] = {}
+                prop_dict["Geometries"][geom_number]["Population_Analysis"][analysis_type][method] = prop_info
+
             elif line.startswith("$"):
                 prop = line[1:].strip()
                 prop_info, geom_number = cls._parse_prop(prop_io)
                 group_key = re.search(GROUP_PATTERN, prop)
                 if group_key is not None:
+                    if "Method" in prop_info:
+                        del prop_info["Method"]
+
                     super_type = PROP_GROUPS[group_key.group(1)]
                     prop_name = prop.replace(group_key.group(1), "").rstrip("_").lstrip("_")
                     if super_type not in prop_dict["Geometries"][geom_number]:
@@ -188,33 +214,41 @@ def _flatten_arrays(data: dict) -> dict:
         return data
 
 
-def prop_to_json(file: Path, output: Path | None = None) -> None:
-    """Parse ``file.property.txt`` and write to ``file.property.json``."""
-    prop_dict = OrcaPropParse.load(file)
+def write_json(prop_dict: dict, output: Path) -> None:
+    """Format and write a property dictionary to a JSON file"""
     prop_dict = _flatten_arrays(prop_dict)
     prop_str = (
         json.dumps(prop_dict, indent=4).replace('"[', "[").replace(']"', "]")
     )
     prop_str = prop_str.replace(r"\"", '"')
-
-    if output is not None:
-        output.write_text(prop_str, encoding="utf-8", newline="\n")
-    else:
-        output = file.parent / file.name.replace(".txt", ".json")
-        output.write_text(prop_str, encoding="utf-8", newline="\n")
+    output.write_text(prop_str, encoding="utf-8", newline="\n")
 
 
-def prop_to_toml(file: Path, output: Path | None = None) -> None:
-    """Parse ``file.property.txt`` and write to ``file.property.toml``."""
-    prop_dict = OrcaPropParse.load(file)
+def write_toml(prop_dict: dict, output: Path) -> None:
+    """Format and write a property dictionary to a TOML file"""
     prop_dict = _flatten_arrays(prop_dict)
     prop_str = (
         rtoml.dumps(prop_dict, pretty=True).replace("'[", "[").replace("]'", "]")
     )
     prop_str = prop_str.replace("'", '"')
+    output.write_text(prop_str, encoding="utf-8", newline="\n")
 
-    if output is not None:
-        output.write_text(prop_str, encoding="utf-8", newline="\n")
-    else:
+
+def prop_to_json(file: Path, output: Path | None = None) -> None:
+    """Parse ``file.property.txt`` and write to ``file.property.json``."""
+    prop_dict = OrcaPropParse.load(file)
+
+    if output is None:
+        output = file.parent / file.name.replace(".txt", ".json")
+
+    write_json(prop_dict, output)
+
+
+def prop_to_toml(file: Path, output: Path | None = None) -> None:
+    """Parse ``file.property.txt`` and write to ``file.property.toml``."""
+    prop_dict = OrcaPropParse.load(file)
+
+    if output is None:
         output = file.parent / file.name.replace(".txt", ".toml")
-        output.write_text(prop_str, encoding="utf-8", newline="\n")
+
+    write_toml(prop_dict, output)
