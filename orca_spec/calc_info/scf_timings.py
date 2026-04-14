@@ -1,0 +1,55 @@
+from pydantic import BaseModel
+
+
+class SCF_Timings(BaseModel):
+
+    TOTAL:         float | None
+    PREP:          float | None
+    GUESS:         float | None
+    FOCK:          float | None
+    DENS:          float | None
+    DIAG:          float | None
+    ETOT:          float | None
+    POP:           float | None
+    TRAFO:         float | None
+    ORTHO:         float | None
+    DIIS:          float | None
+    SOSCF:         float | None
+    NR:            float | None
+    J:             float | None
+    X:             float | None
+    XC:            float | None
+    GRID:          float | None
+    FSYMMETR:      float | None
+    PSYMMETR:      float | None
+    FOCKSTART:     float | None
+    SOLV:          float | None
+    SOLV_INIT:     float | None
+    SOLV_FINAL:    float | None
+    INT_PREP:      float | None
+    INT_PRESCREEN: float | None
+    INT_BF:        float | None
+    INT_DENS:      float | None
+    INT_DENSIO:    float | None
+    INT_FUNC:      float | None
+    INT_POT:       float | None
+    INT_POTIO:     float | None
+    INT_SUM:       float | None
+    SPLITRIJ:      float | None
+    COSX:          float | None
+    COSX1C:        float | None
+    RIJK:          float | None
+    STABANA:       float | None
+    DFET:          float | None
+    ADFT_GUESS:    float | None
+    ADFT_JDENS:    float | None
+    ADFT_JMAT:     float | None
+    ADFT_XDENS:    float | None
+    ADFT_XMAT:     float | None
+    ADFT_TMAT:     float | None
+    ADFT_EQNSOLV:  float | None
+    ECRISM:        float | None
+    ECRISM_QESP:   float | None
+    ECRISM_TOOL:   float | None
+    ECRISM_FOCK:   float | None
+    FROZCORE:      float | None

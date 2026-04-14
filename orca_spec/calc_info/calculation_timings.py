@@ -1,0 +1,58 @@
+from pydantic import BaseModel
+
+
+class Calculation_Timings(BaseModel):
+
+    GTOINT:     float | None
+    STOINT:     float | None
+    SCF:        float | None
+    SCFGRAD:    float | None
+    GSTEP:      float | None
+    PLOT:       float | None
+    MOM:        float | None
+    MP2:        float | None
+    CPSCF:      float | None
+    LOC:        float | None
+    CIS:        float | None
+    MRCI:       float | None
+    REL:        float | None
+    SOC:        float | None
+    EPRNMR:     float | None
+    CASSCF:     float | None
+    MDCI:       float | None
+    CHELPG:     float | None
+    ROCIS:      float | None
+    MRCC:       float | None
+    FCI:        float | None
+    MD:         float | None
+    FREQ:       float | None
+    FREQ_NUM:   float | None
+    COMPOUND:   float | None
+    CIPSI:      float | None
+    AUTOCI:     float | None
+    ESD:        float | None
+    DLPNOCC:    float | None
+    MCRPA:      float | None
+    NEB:        float | None
+    CONFSC:     float | None
+    ANMR:       float | None
+    MM:         float | None
+    MMGRAD:     float | None
+    XTB:        float | None
+    XTBGRAD:    float | None
+    LFT:        float | None
+    EXT:        float | None
+    ONIOM_S:    float | None
+    ONIOM_M:    float | None
+    ONIOM_L:    float | None
+    PROPINT:    float | None
+    RESPONSE:   float | None
+    PROP:       float | None
+    CASRESP:    float | None
+    MP2RESP:    float | None
+    COSMORS:    float | None
+    AUTOCIRESP: float | None
+    GOAT:       float | None
+    CISRESP:    float | None
+    EDA:        float | None
+    SUM:        float | None
